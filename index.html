@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Culebrita: Conceptos de Medición</title>
+<style>
+  :root{
+    --bg:#071329; --panel:#0b1830; --accent:#38bdf8; --good:#10b981; --bad:#f43f5e; --muted:#9fb0c8;
+  }
+  *{box-sizing:border-box;font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif}
+  body{margin:0;background:linear-gradient(180deg,var(--bg),#052038);color:#e6f0fb;display:flex;flex-direction:column;align-items:center;min-height:100vh;padding:18px}
+  h1{margin:8px 0 4px;font-size:20px;color:var(--accent)}
+  .container{width:100%;max-width:980px;display:grid;grid-template-columns:1fr 320px;gap:16px;margin-top:12px}
+  .canvas-wrap{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:12px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+  canvas{background:#071a2b;border-radius:8px;display:block;margin:0 auto}
+  .panel{background:var(--panel);padding:14px;border-radius:12px}
+  .stat{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,0.03)}
+  .stat:last-child{border-bottom:0}
+  .btn{display:inline-block;padding:8px 12px;border-radius:8px;border:0;background:var(--accent);color:#022;cursor:pointer;margin-right:8px}
+  .small{font-size:13px;color:var(--muted)}
+  .explain{margin-top:12px;padding:10px;border-radius:8px;background:rgba(255,255,255,0.02);min-height:64px}
+  .apple-label{font-weight:700;font-size:13px}
+  footer{margin-top:16px;color:var(--muted);font-size:13px;text-align:center}
+  @media(max-width:900px){.container{grid-template-columns:1fr} canvas{max-width:100%}}
+</style>
+</head>
+<body>
+  <h1>Culebrita - Aprende parámetros de medición</h1>
+  <div class="container">
+    <div class="canvas-wrap">
+      <canvas id="game" width="720" height="480"></canvas>
+    </div>
+
+    <div class="panel">
+      <div class="stat"><div><strong>Puntuación</strong></div><div id="score">0</div></div>
+      <div class="stat"><div><strong>Vidas</strong></div><div id="lives">3</div></div>
+      <div class="stat"><div><strong>Manzana actual</strong></div><div id="appleType">—</div></div>
+      <div class="stat"><div><strong>Velocidad</strong></div><div id="speed">Normal</div></div>
+
+      <div style="margin-top:10px">
+        <button class="btn" id="startBtn">Iniciar</button>
+        <button class="btn" id="pauseBtn">Pausa</button>
+        <button class="btn" id="resetBtn">Reiniciar</button>
+      </div>
+
+      <div class="explain" id="explain">
+        <div class="small">Cuando la culebra coma una manzana aparecerá una explicación: si es <span style="color:var(--good)">buena</span> sumarás puntos; si es <span style="color:var(--bad)">mala</span> perderás vida.</div>
+      </div>
+
+      <div style="margin-top:12px">
+        <div class="small"><strong>Controles:</strong> Flechas o W/A/S/D</div>
+        <div class="small" style="margin-top:6px"><strong>Objetivo:</strong> Comer la manzana correcta (concepto verdadero) y evitar las incorrectas.</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>Parámetros incluidos: Resistencia, Capacitancia, Impedancia, Longitud, WireMap, Atenuación,
+  NEXT, PSNEXT, ACR, PSACR, Delay Skew, ANEXT, PSANEXT, SRL, ACRF, PSACRF, PSAACRF.</footer>
+
+<script>
+/* datos del juego */
+</script>
+</body>
+</html>
